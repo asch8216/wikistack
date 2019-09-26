@@ -11,8 +11,9 @@ const wiki = require('./routes/wiki');
 const users = require('./routes/users');
 const bodyParser = require('body-parser');
 
-// app.use(bodyParser.json())
-app.use (bodyParser(express.urlencoded({extended: true})));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser(express.urlencoded({ extended: true })));
 
 app.use(morgan('dev'));
 
